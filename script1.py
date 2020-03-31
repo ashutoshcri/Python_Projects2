@@ -21,6 +21,10 @@ def greet_user():
     usr=get_stored_username()
     if usr:
         print(f"Welcome back, {usr}!")
+        x=input('Would you like to add another user? (yes/no): ')
+        if x=='yes':
+            usr=get_new_username()
+            print(f"We'll remember when you come back, {usr}!")
     else:
         usr=get_new_username()
         print(f"We'll remember when you come back, {usr}!")
